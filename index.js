@@ -28,7 +28,7 @@ bot.on("message", async message => {
 
     let content = message.content.toLowerCase();
  
-    if(content.startsWith(`${prefix}purge`)){
+    if(content.startsWith(`.purge`)){
     message.delete()
     let messages = message.content.split(" ").slice(1).join("");
 
@@ -49,15 +49,14 @@ bot.on("message", async message => {
  
  }
 
-   if(content.startsWith(`${prefix}say`)){
+   if(content.startsWith(`.say`)){
   	
    let text = message.content.split(" ").slice(1).join(" ")
   
   	const embed = new Discord.MessageEmbed()
-       .setTitle(`${message.author.username} Sayed`)
        .setColor('#E4B400')
-       .setDescription(text)
-       .setFooter(`Sayed by ${message.author.username}`)
+       .setDescription(`${message.author.username} Sayed`, text)
+       .setFooter(`Made by zItsTomFN`)
        message.channel.send(embed)
        message.delete()
   
