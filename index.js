@@ -6,7 +6,7 @@ bot.on('ready',() => {
 	bot.user.setStatus("dnd")
     console.log(`Logged as ${bot.user.username}`)
 
-    //Status wechsel
+    //Status
     let statuses = [
         `s?help `,
         `on ${bot.guilds.cache.size} Guilds `,
